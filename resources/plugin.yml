@@ -1,0 +1,7 @@
+name: VanishChat
+version: 1.0.0
+api-version: 1.15
+main: com.skamlic.vanishchat.VanishChat
+author: "Domen Skamlic"
+description: "If player is vanished the chats sent will be automatically prepended with /s."
+softdepend: [SuperVanish, PremiumVanish, UltimateChat, PlaceholderAPI]
