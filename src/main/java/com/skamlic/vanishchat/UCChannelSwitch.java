@@ -29,4 +29,18 @@ public class UCChannelSwitch {
         }
         return false;
     }
+
+    public static boolean joinInvisible(FileConfiguration config, Player player) {
+        UCChannel fromChannel = UChat.get().getChannel(config.getString("switchFromChannel"));
+        UCChannel toChannel = UChat.get().getChannel(config.getString("switchToChannel"));
+        UCChannel playerChannel = UChat.get().getPlayerChannel(player);
+
+        String plrCh = playerChannel.getName();
+        if (plrCh.equals(fromChannel.getName())) {
+            playerChannel.removeMember(player);
+            toChannel.addMember(player);
+            return true;
+        }
+        return false;
+    }
 }

@@ -52,7 +52,10 @@ public class VanishChat extends JavaPlugin implements Listener, ChannelSwitchMes
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player p = event.getPlayer();
         if (isVanishLoaded && VanishAPI.isInvisible(p)) {
-            handleChannelSwitchMessage(event.getPlayer());
+            boolean wasSwitchSuccessful = UCChannelSwitch.joinInvisible(config, p);
+            if (wasSwitchSuccessful) {
+                BroadcastChannelSwitch.printSwitchMsg(config, isPAPILoaded, p);
+            }
         }
     }
 
