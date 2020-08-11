@@ -2,6 +2,8 @@ package com.skamlic.vanishchat;
 
 import br.net.fabiozumbi12.UltimateChat.Bukkit.UCChannel;
 import br.net.fabiozumbi12.UltimateChat.Bukkit.UChat;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
@@ -9,6 +11,8 @@ public class UCChannelSwitch {
 
     // returns true if the channel was switched from Global to Mod
     public static boolean switchChannel(FileConfiguration config, Player player, boolean isVisible) {
+//        String visibility = isVisible ? "true" : "false";
+//        Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + visibility);
         UCChannel fromChannel = UChat.get().getChannel(config.getString("switchFromChannel"));
         UCChannel toChannel = UChat.get().getChannel(config.getString("switchToChannel"));
         UCChannel playerChannel = UChat.get().getPlayerChannel(player);
