@@ -4,6 +4,6 @@ Minecraft plugin to switch UltimateChat channel when you vanish.
 
 Required plugins:
 
-- SuperVanish
+- SuperVanish or PremiumVanish
 - UniversalChat
 - PlaceholderAPI (optional)
