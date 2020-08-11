@@ -26,7 +26,7 @@ public class VanishChat extends JavaPlugin implements Listener, ChannelSwitchMes
         config.addDefault("switchToChannel", "Mod");
         config.addDefault("switchChannelWhenUnvanish", false);
         config.addDefault("switchChannelMessage", "&4Chat channel automatically changed to &6Mod&4.");
-        config.addDefault("switchChannelMessagePAPI", "&4Chat channel automatically changed to &6%uchat_player_channel_name%&4.");
+        config.addDefault("switchChannelMessagePAPI", "&4Chat channel automatically changed to &6%uchat_placeholder_ch-color%%uchat_player_channel_name%&4.");
         config.options().copyDefaults(true);
         saveConfig();
     }
